@@ -1,0 +1,387 @@
+body {
+    margin: 0;
+    font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f8fafc 0%, #ffe0f7 100%);
+    min-height: 100vh;
+    color: #444;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header styling for the Heading component */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-height: 40px;
+    width: 100%;
+    background: linear-gradient(90deg, #ffb8e0 0%, #b8c6ff 100%);
+    box-shadow: 0 4px 16px 0 rgba(127, 83, 172, 0.15);
+    padding: 20px 30px;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    gap: 8px;
+    overflow: hidden;
+}
+
+/* .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: linear-gradient(90deg, #ffb8e0 0%, #b8c6ff 100%);
+    box-shadow: 0 4px 16px 0 rgba(127, 83, 172, 0.10);
+    padding: 18px 0 12px 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+} */
+
+/* Main container for the entire app */
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Container for side-by-side layout */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 50px;
+    padding: 20px 20px 120px 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.App {
+    background: #fff6fbcc;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.12);
+    padding: 40px 32px 32px 32px;
+    min-width: 340px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    border: 2px solid #ffe0f7;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1;
+}
+
+.heading {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #ff7eb9;
+    margin: 0;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px #ffe0f7;
+    padding: 8px 0;
+}
+
+/* Header paragraph styling */
+header p {
+    font-size: 1rem;
+    margin: 0;
+    color: #7f53ac;
+    font-weight: 500;
+    padding: 2px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+.list h1{
+    font-size: 2.2rem;
+        font-weight: 700;
+        color: #ff7eb9;
+        margin: 0 0 20px 0;
+        letter-spacing: 1px;
+        text-shadow: 0 2px 8px #ffe0f7;
+}
+
+p {
+    font-size: 1.1rem;
+    margin: 16px 0;
+    color: #7f53ac;
+    padding: 4px 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* Add consistent spacing between list items */
+}
+
+li {
+    background: #ffe0f7;
+    margin: 0;
+    /* Remove margin since we're using gap on parent */
+    padding: 14px 20px;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px 0 rgba(255, 126, 185, 0.08);
+    font-size: 1.1rem;
+    color: #7f53ac;
+    transition: all 0.2s ease;
+}
+
+li:hover {
+    background: #ffb8e0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px 0 rgba(255, 126, 185, 0.15);
+}
+
+code {
+    font-family: 'Fira Mono', 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace;
+    background: #f3e8ff;
+    color: #7f53ac;
+    padding: 4px 8px;
+    border-radius: 6px;
+    margin: 0 2px;
+}
+
+/* Contacts section styling */
+.contacts-section {
+    background: #fff6fbcc;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.12);
+    padding: 40px 32px 32px 32px;
+    min-width: 340px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    border: 2px solid #ffe0f7;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1;
+}
+
+.contacts-section h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ff7eb9;
+    margin: 0 0 20px 0;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px #ffe0f7;
+}
+
+/* Contact card styling */
+.contact-card {
+    background: #ffe0f7;
+    margin: 0 0 16px 0;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px 0 rgba(255, 126, 185, 0.08);
+    transition: all 0.2s ease;
+}
+
+.contact-card:hover {
+    background: #ffb8e0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px 0 rgba(255, 126, 185, 0.15);
+}
+
+.contact-card h2 {
+    font-size: 1.4rem;
+    color: #7f53ac;
+    margin: 0 0 12px 0;
+    font-weight: 600;
+}
+
+.contact-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px 0;
+    border: 3px solid #ffb8e0;
+}
+
+.contact-card p {
+    font-size: 1rem;
+    color: #7f53ac;
+    margin: 8px 0;
+    padding: 2px 0;
+}
+
+/* Footer styling */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 1vw;
+    width: 100%;
+    background: linear-gradient(90deg, #ffb8e0 0%, #b8c6ff 100%);
+    box-shadow: 0 -4px 16px 0 rgba(127, 83, 172, 0.15);
+    padding: 20px 30px;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 20px;
+}
+
+footer p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #7f53ac;
+    font-weight: 500;
+    padding: 2px 0;
+}
+
+/* EmojiPedia styling */
+.emoji-dictionary {
+    background: #fff6fbcc;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.12);
+    padding: 40px 32px 32px 32px;
+    min-width: 340px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    border: 2px solid #ffe0f7;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1;
+}
+
+.emoji-dictionary h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ff7eb9;
+    margin: 0 0 20px 0;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px #ffe0f7;
+
+}
+
+.term {
+    background: #ffe0f7;
+    margin: 0 0 20px 0;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px 0 rgba(255, 126, 185, 0.08);
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+.term:hover {
+    background: #ffb8e0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px 0 rgba(255, 126, 185, 0.15);
+}
+
+.term dt {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #7f53ac;
+}
+
+.term .emoji {
+    font-size: 2rem;
+    display: inline-block;
+    min-width: 40px;
+    text-align: center;
+}
+
+.term dd {
+    margin: 0;
+    padding: 8px 0;
+    font-size: 1.1rem;
+    color: #7f53ac;
+    line-height: 1.6;
+    margin-left: 52px;
+    /* Align with the text after emoji */
+}
+
+@media (max-width: 600px) {
+    .main-content {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 200px;
+        padding: 16px 16px 120px 16px;
+    }
+
+    .App,
+    .contacts-section {
+        padding: 24px 16px;
+        min-width: unset;
+        max-width: 95vw;
+        gap: 20px;
+    }
+
+    .heading {
+        font-size: 2.2rem;
+    }
+
+    .contacts-section h1 {
+        font-size: 1.8rem;
+    }
+
+    header {
+        padding: 16px 20px;
+        gap: 6px;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .contact-card img {
+        width: 60px;
+        height: 60px;
+    }
+
+    footer {
+        padding: 16px 20px;
+        gap: 15px;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+    .term {
+        padding: 20px 16px;
+        margin-bottom: 16px;
+    }
+
+    .term dt {
+        font-size: 1.2rem;
+        gap: 10px;
+    }
+
+    .term .emoji {
+        font-size: 1.8rem;
+        min-width: 36px;
+    }
+
+    .term dd {
+        font-size: 1rem;
+        margin-left: 46px;
+    }
+}
